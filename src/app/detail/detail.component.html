@@ -1,0 +1,9 @@
+<button class="btn btn-default"
+(click) = 'onDisplayClick()'>Display Details</button>
+<p *ngIf='pShow'>Secret Password = 'tuna'</p>
+<hr>
+<label class="label">Log:</label>
+<p *ngFor ="let log of clickLog;let idx = index;"
+[ngStyle] = "{backgroundColor: idx >= 4 ? 'blue' : 'white'}"
+[ngClass] = "{fivePlusFontColor: idx >= 4}"
+>clicked: {{log | date:'MM/dd/yyyy h:mm:ss a'}}</p>
